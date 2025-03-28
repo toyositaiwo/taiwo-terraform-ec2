@@ -60,7 +60,7 @@ resource "aws_instance" "taiwo-ec2" {
   ami           = "ami-06e46074ae430fba6"
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.demotf_subnet.id
-  key_name = Testbed-key 
+  key_name = var.instance_keypair
   vpc_security_group_ids = [aws_security_group.demotf_security_group.id]
   associate_public_ip_address = true
 
