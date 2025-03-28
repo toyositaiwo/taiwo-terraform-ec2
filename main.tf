@@ -56,7 +56,7 @@ variable "instance_keypair" {
   sensitive = true
 }
 
-resource "aws_instance" "demo_instance" {
+resource "aws_instance" "taiwo-ec2" {
   ami           = "ami-06e46074ae430fba6"
   instance_type = "t2.micro"
   subnet_id     = aws_subnet.demotf_subnet.id
